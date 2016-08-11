@@ -1,0 +1,31 @@
+<html>
+<script src="JQuery/jquery-3.1.0.min.js"></script>
+<script src="js/animation.js"></script>
+<link rel="stylesheet"  type="text/css" href="css/div_style.css">
+<body>
+       <!--<p>hello</p>-->
+<!--<button id="hide">hide tag p</button>-->
+<!--<button id="show">show tag p</button>-->
+<!--<button id="hide_show">hide/show</button>-->
+       <button id="fade_out">fade out</button>
+       <button id="fade_in">fade in</button>
+<script>
+       for (var i=0;i<4;i++)
+       {
+         $("<div>").appendTo(document.body);
+       }
+       $("div").click(function(){
+          $(this).hide(1000,function(){
+                 $(this).remove();
+          });
+       });
+       $("#fade_out").click(function(){
+          $("div").fadeOut(1000);
+       });
+       $("#fade_in").click(function(){
+          $("div").fadeIn(1000);
+       });
+</script>
+
+</body>
+</html>
